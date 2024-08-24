@@ -6,7 +6,6 @@ def summary(net, input_size, batch_size=-1, device_target="GPU", device_id=0, dt
     """
     Print a summary of the network.
     """
-    print("ok3")
     result, params_info = summary_string(
         net, input_size, batch_size, device_target, device_id, dtypes)
     print(result)
