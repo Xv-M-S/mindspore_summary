@@ -2,8 +2,8 @@
 Torch has a neat API to view the visualization of the model which is very helpful while debugging your network. Here is a code to try and mimic the same in MindSpore. The aim is to provide information complementary to, what is not provided by print(your_model) in MindSpore.
 
 # Usage
-- Clone the repository: 'git clone https://github.com/Xv-M-S/mindspore_summary.git'
-- Install the package using 'python setup.py install'
+- Clone the repository: `git clone https://github.com/Xv-M-S/mindspore_summary.git`
+- Install the package using `python setup.py install`
 
 ```python
 from netsummary import summary,summary_string
@@ -12,8 +12,8 @@ summary(your_model, input_size=(channels, H, W))
 - Note that the input_size is required to make a forward pass through the network.
 
 # Examples
-## SingleInputNet
-```CNN for MNIST
+## CNN for MNIST
+```python
 import mindspore.nn as nn
 import mindspore.ops.operations as P
 from mindspore.common.initializer import Normal
@@ -119,4 +119,4 @@ Estimated Total Size (MB): 0.46
 - Thanks to @sksq96
 
 # License
-- 'netsummary'is licensed under the Apache License 2.0.
+- `netsummary` is licensed under the Apache License 2.0.
