@@ -13,6 +13,6 @@
 # limitations under the License.
 # ============================================================================
 """.. MindSpore summary package."""
-from .netsummary import summary, summary_string
+from .fix_netsummary import summary, summary_string
 
 # __all__ = ["summary", "summary_string"]

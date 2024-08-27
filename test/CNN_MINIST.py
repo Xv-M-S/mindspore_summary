@@ -2,6 +2,7 @@ import mindspore.nn as nn
 import mindspore.ops.operations as P
 from mindspore.common.initializer import Normal
 from netsummary import summary, summary_string
+# from mindspore.info_summary import summary
 
 class Net(nn.Cell):
     def __init__(self):
@@ -27,4 +28,20 @@ class Net(nn.Cell):
 
 
 model = Net()
+
+print(model.trainable_params())
+trainable_param = 0
+for param in model.get_parameters():
+    trainable_param += param.data.numel() 
+    print(param.name, param.data.shape)
+print(trainable_param)
+
+print(model.untrainable_params())
+
+total_params = 0
+for param in model.get_parameters():
+    total_params += param.data.numel() 
+    print(param.name, param.data.shape)
+print(total_params)
+
 summary(model, (1, 28, 28),device_target="CPU")
